@@ -57,7 +57,7 @@ public class GameBoard {
     }
 
     public boolean canPlaceShip(int size, int row, int col, boolean vertical) {
-        for (int r = 0; r <= size; r++) {
+        for (int r = 0; r < size; r++) {
             if (vertical) {
                 if (cells[row +r][col].hasShip()) {
                     return false;
@@ -72,7 +72,7 @@ public class GameBoard {
     }
 
     public void placeShip(int size, int row, int col, boolean vertical) {
-        for (int r = 0; r <= size; r++) {
+        for (int r = 0; r < size; r++) {
             if (vertical) {
                 cells[row + r][col].placeShip();
             } else {

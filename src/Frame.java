@@ -105,9 +105,9 @@ public class Frame extends JFrame {
     }
 
     private void playAgain() {
-        int res = JOptionPane.showConfirmDialog(this, "Do you want to play again?", "Play Again", JOptionPane.YES_NO_OPTION);
+        int result = JOptionPane.showConfirmDialog(this, "Do you want to play again?", "Play Again?", JOptionPane.YES_NO_OPTION);
 
-        if(res == JOptionPane.YES_OPTION) {
+        if(result == JOptionPane.YES_OPTION) {
             resetGame();
         }
     }
@@ -116,7 +116,7 @@ public class Frame extends JFrame {
         game = new BattleshipGame();
         for (int row = 0; row < BOARD_SIZE; row++) {
             for (int col = 0; col < BOARD_SIZE; col++) {
-                boardButtons[row][col].setText("");
+                boardButtons[row][col].setText("~");
             }
         }
 
