@@ -1,5 +1,10 @@
+import javax.swing.*;
+
 public class Runner {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Frame frame = new Frame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 }
