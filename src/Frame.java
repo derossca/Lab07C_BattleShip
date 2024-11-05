@@ -98,10 +98,10 @@ public class Frame extends JFrame {
     }
 
     private void updateStatus() {
-        totalHitLabel.setText("Total Hits: " + game.getTotalHits());
-        totalMissLabel.setText("Total Misses: " + game.getTotalMisses());
-        currentMissLabel.setText("Current Misses: " + game.getCurrentMisses());
-        strikesLabel.setText("Strikes: " + game.getStrikes());
+        totalHitLabel.setText(" " + game.getTotalHits());
+        totalMissLabel.setText(" " + game.getTotalMisses());
+        currentMissLabel.setText(" " + game.getCurrentMisses());
+        strikesLabel.setText(" " + game.getStrikes());
     }
 
     private void playAgain() {
@@ -116,10 +116,9 @@ public class Frame extends JFrame {
         game = new BattleshipGame();
         for (int row = 0; row < BOARD_SIZE; row++) {
             for (int col = 0; col < BOARD_SIZE; col++) {
-                boardButtons[row][col].setText("~");
+                boardButtons[row][col].setText("");
             }
         }
-
         updateStatus();
     }
 
